@@ -8,25 +8,25 @@ function makeCalculator() {
   const calc = {
     balance: 0,
 
-    operate: function (f, value) {
+    operate(f, value) {
       f(value);
 
       return this;
     },
 
-    add: function (value) {
+    add(value) {
       calc.balance += value;
     },
 
-    subtract: function (value) {
+    subtract(value) {
       calc.balance -= value;
     },
 
-    divide: function (value) {
+    divide(value) {
       calc.balance /= value;
     },
 
-    multiply: function (value) {
+    multiply(value) {
       calc.balance *= value;
     },
 
@@ -34,7 +34,7 @@ function makeCalculator() {
       return calc.balance;
     },
 
-    reset: function () {
+    reset() {
       calc.balance = 0;
 
       return this;
